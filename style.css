@@ -1,0 +1,117 @@
+@font-face {
+    font-family: FiraSans;
+    src: url(FiraSans-Regular.ttf);
+}
+
+body {
+    overflow-y: auto;
+    margin: 0;
+    padding: 0;
+    font-family: FiraSans;
+    background-color: black;
+    background: linear-gradient(to right, #1f1f1f, #7a6962);
+    filter: invert(100%);
+    line-height: 1.1em;
+}
+
+body img {
+    filter: invert(100%);
+}
+
+main {
+    rotate: 3deg;
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 25% auto 25%;
+    grid-column-gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+header {
+    margin-bottom: 10px;
+}
+
+header h1 {
+    font-size: 1.3em;
+}
+
+header img {
+    width: 150px;
+    display: block;
+    margin: auto;
+}
+
+aside img {
+    display: block;
+    padding-top: 0.5em;
+    max-width: 200px;
+}
+
+main {
+    overflow: hidden;
+    display: grid;
+}
+
+.posts {
+    overflow-y: auto;
+    padding-right: 20px;
+    margin-top: 40px;
+}
+
+footer {
+    text-align: center;
+    padding-top: 100px;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+    width: 0.4em;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #1f1f1f00;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #1f1f1f;
+}
+
+/* Responsive */
+
+@media (max-width: 800px) {
+
+    .container {
+        grid-template-columns: auto;
+    }
+
+    aside {
+        margin-top: 4em;
+        padding: 1em;
+        border: 1px solid black;
+        border-radius: 6px;
+        grid-row: 3;
+        /* box-shadow: 3px 3px 2px 2px rgb(255, 188, 157); */
+    }
+
+    main {
+        height: 400px;
+    }
+
+    .posts {
+        rotate: none;
+    }
+
+    .container {
+        height: auto;
+    }
+
+    footer {
+        padding-top: 50px;
+    }
+}
